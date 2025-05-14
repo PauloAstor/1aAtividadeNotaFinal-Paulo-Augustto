@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 2</title>
+    
+    <style>
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+thead{
+background-color: aqua;
+color: white;
+
+}
+th, td{
+    padding: 17px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+}
+tbody tr:nth-child(even){
+    background-color:#d6d5d5;
+}
+
+tbody tr:hover{
+    background-color: #7a0f0fb6;
+}
+    </style>
+
+</head>
+<body>
+    <h2>Tabela de Produtos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>descrição</th>
+                <th>preço$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Elden Ring</td>
+                <td> Souls like,Mundo Aberto,Fantasia Sombria,RPG</td>
+                <td>229,90</td>
+            </tr>
+            <tr>
+                <td>Dark Souls</td>
+                <td>Souls Like,Mundo Aberto,RPG,Difícil,Ação</td>
+                <td>154,90</td>
+                    
+            </tr>
+            <tr>
+                <td>Lies of P</td>
+                <td>Souls Like,Ação,Fantasia Sombria,RPG de Ação </td>
+                <td>249,90</td>
+                    
+            </tr>
+            <tr>
+                <td>Code Vein</td>
+                <td>Souls Like,Anime,RPG,Difícil</td>
+                <td>149,90</td>
+                    
+            </tr>
+            <tr>
+                <td>Khazan</td>
+                <td>Souls Like,Difícil,RPG de Ação,Hack and Slash</td>
+                <td>299,90</td>
+                    
+            </tr>
+            <tr>
+                <td>Wukong</td>
+                <td>Souls Like,Mitologia,RPG de Ação,Ação,RPG</td>
+                <td>229,99</td>
+                    
+            </tr> <tr>
+                <td>Wuchang</td>
+                <td>Souls Like,Difícil,RPG de Ação,Hack and Slash</td>
+                <td>199,00</td>
+                    
+            </tr> <tr>
+                <td>StellRising</td>
+                <td>Souls Like,Atmosférico,Ação,Um Jogador,RPG</td>
+                <td>94,99</td>
+                    
+            </tr> <tr>
+                <td>Remnant</td>
+                <td>Souls Like,Cooperativo,Ação,Aventura,RPG</td>
+                <td>199,99</td>
+                    
+            </tr> <tr>
+                <td>Wo Long</td>
+                <td>Souls Like,Ação,RPG,Difícil,RPG de Ação</td>
+                <td>199,00</td>
+                    
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
