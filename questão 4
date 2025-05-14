@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+
+        }
+         
+        .calculadora {
+            background-color: aqua;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 10, 14, 0.5);
+        }
+         h2 {
+            color: rgb(179, 13, 1);
+            margin-bottom: 18px;
+         }
+         input {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #d30909;
+
+
+         }
+         .botao {
+            background-color: #d30909;
+            color: white;
+            border: none;
+            padding: 6px 7px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3;
+
+         }
+         .botao:hover {
+            background-color: #7a0f0fb6;
+            box-shadow:#7a0f0fb6 ;
+            box-shadow: 0 0 9px #7a0f0fb6, 0 0 15px #7a0f0fb6;
+        }
+         
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+    <h2>Calculadora de IMC</h2>
+         <input type="number" id="peso" placeholder="peso (kg) " required>
+         <input type="number" id="altura" placeholder="Altura (m)" required>
+         <button class="botao"onclick="calcularIMC()">calcular</button>
+    <div id="resultado"></div>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+            const resultado = document.getElementById('resultado');
+
+            if(!peso || !altura || peso<= 0 || altura<=0 ) {
+                resultado.textContent = "opa preencha os campos corretamente.";
+                resultado.style.color = "red"; return;
+
+
+            }
+                const imc = peso / (altura * altura);
+                let classificacao = "";
+                
+                if (imc <18.5) {
+                    classificacao = "abaixo do peso";
+
+                } else if (imc < 24.9) {
+                    classificacao = "peso normal";
+                }else if (imc < 29.9) {
+                    classificacao = "acima do peso";
+                }else {
+                classificacao = "obesidade";
+            }
+                resultado.textContent = `Seu IMC é ${imc.toFixed(2)} (${classificacao})`;
+                resultado.style.color = "#7a0f0fb6";
+
+                
+
+        }
+    </script>
+</body>
+</html>
